@@ -1,0 +1,25 @@
+/* @keyframes animate-shimmer {
+  from {
+    left: -150px;
+  }
+  to {
+    left: 100%;
+  }
+}
+
+.skeletonShimmer::before {
+  content: "";
+  display: block;
+  position: absolute;
+  left: -150px;
+  top: 0;
+  height: 100%;
+  width: 80%;
+  background: linear-gradient(
+    to right,
+    transparent 0%,
+    #f3e4d4 50%,
+    transparent 100%
+  );
+  animation: animate-shimmer 1.5s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+} */

@@ -2,6 +2,7 @@ import * as Yup from "yup";
 
 export interface UniversalFormProps {
   subtitle?: string;
+  isLoading?: boolean;
   initialValues: any;
   validationSchema: Yup.ObjectSchema<any>;
   onSubmit: (values: any) => void;

@@ -1,5 +1,5 @@
 // _app.tsx
-// import "@/styles/fonts.module.css";
+import "@/styles/fonts.module.css";
 import "@/styles/globals.css";
 import type { AppProps } from "next/app";
 import { QueryClient, QueryClientProvider } from "react-query";

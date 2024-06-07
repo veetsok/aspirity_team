@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useRef, useLayoutEffect } from "react";
 import { Formik, Form } from "formik";
 import ButtonAtom from "../../Atoms/Button.Atom";
 import ButtonAtomEnum from "../../Atoms/Button.Atom/enum";
@@ -6,24 +6,42 @@ import InputMolecule from "../../Molecules/Input.Molecule";
 import { UniversalFormProps } from "./type";
 import TextAtom from "../../Atoms/Text.Atom";
 import TextAtomEnum from "../../Atoms/Text.Atom/enum";
+import Spinner from "../../Spinner";
 
 const UniversalForm: React.FC<UniversalFormProps> = (props) => {
-  const {
-    initialValues,
-    validationSchema,
-    onSubmit,
-    fields,
-    subtitle,
-    isEditing,
-    onEdit,
-  } = props;
+  const { initialValues,isLoading, validationSchema, onSubmit, fields, subtitle } = props;
+
+  const [isEditing, setIsEditing] = useState(false);
+  const formRef = useRef<HTMLDivElement>(null);
+
+  const handleClickOutside = (event: MouseEvent) => {
+    if (formRef.current && !formRef.current.contains(event.target as Node)) {
+      setIsEditing(false);
+    }
+  };
+
+  useLayoutEffect(() => {
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, []);
+
+  const handleEdit = () => {
+    setIsEditing(true);
+  };
 
   return (
-    <div className="flex flex-col gap-8">
+    <div className="flex flex-col gap-8" ref={formRef}>
       <Formik
         initialValues={initialValues}
         validationSchema={validationSchema}
-        onSubmit={onSubmit}
+        onSubmit={(values, { setSubmitting }) => {
+          if (isEditing) {
+            onSubmit(values);
+          }
+          setSubmitting(false);
+        }}
       >
         {({
           isSubmitting,
@@ -45,7 +63,7 @@ const UniversalForm: React.FC<UniversalFormProps> = (props) => {
               {!isEditing && (
                 <ButtonAtom
                   type={ButtonAtomEnum.enum_textButton}
-                  onClick={onEdit}
+                  onClick={handleEdit}
                 >
                   Изменить
                 </ButtonAtom>
@@ -72,15 +90,24 @@ const UniversalForm: React.FC<UniversalFormProps> = (props) => {
                   />
                 </div>
               ))}
-              {isEditing && dirty && (
-                <ButtonAtom
-                  type={ButtonAtomEnum.enum_defaultButton}
-                  disabled={isSubmitting}
-                  onClick={() => onSubmit(values)}
-                  className="col-span-2"
-                >
-                  Сохранить изменения
-                </ButtonAtom>
+              {isEditing && (
+                <>
+                  {isLoading ? ( // Показываем спиннер, если isLoading истинно
+                    <Spinner />
+                  ) : (
+                    <ButtonAtom
+                      type={ButtonAtomEnum.enum_defaultButton}
+                      disabled={isSubmitting}
+                      onClick={() => {
+                        onSubmit(values);
+                        setIsEditing(false);
+                      }}
+                      className="col-span-2"
+                    >
+                      Сохранить
+                    </ButtonAtom>
+                  )}
+                </>
               )}
             </Form>
           </>

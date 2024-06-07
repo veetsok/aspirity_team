@@ -21,6 +21,8 @@ const MainLayout: React.FC<MainLayoutProps> = (props) => {
     ...userContacts,
   };
 
+  const { isLoading: isEditLoading } = editTeamMemberMutation; // Получаем состояние загрузки из хука редактирования
+
   const handleSubmit = async (values: any, formType: string) => {
     try {
       await editTeamMemberMutation.mutateAsync({
@@ -43,6 +45,7 @@ const MainLayout: React.FC<MainLayoutProps> = (props) => {
           onSubmit={(values) => handleSubmit(values, "personalInfo")}
           fields={personalInfoFields}
           isEditing={editingForm === "personalInfo"}
+          isLoading={isEditLoading}
           onEdit={() => setEditingForm("personalInfo")}
         />
         <UniversalForm
@@ -52,6 +55,7 @@ const MainLayout: React.FC<MainLayoutProps> = (props) => {
           onSubmit={(values) => handleSubmit(values, "department")}
           fields={departmentFields}
           isEditing={editingForm === "department"}
+          isLoading={isEditLoading}
           onEdit={() => setEditingForm("department")}
         />
         <UniversalForm
@@ -61,6 +65,7 @@ const MainLayout: React.FC<MainLayoutProps> = (props) => {
           onSubmit={(values) => handleSubmit(values, "contacts")}
           fields={contactsFields}
           isEditing={editingForm === "contacts"}
+          isLoading={isEditLoading}
           onEdit={() => setEditingForm("contacts")}
         />
       </div>

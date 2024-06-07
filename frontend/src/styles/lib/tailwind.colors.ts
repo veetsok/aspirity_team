@@ -8,6 +8,7 @@ const colorsTW = {
   bg_error: "#D32F2F",
   bg_blue: "rgba(0, 71, 187, 0.1)",
   bg_orange: "rgba(250, 70, 22, 0.1)",
+  bg_hover: "#003182",
   text_primary: "#e1e3e6",
   text_secondary: "#B0B1B6",
   text_tertiary: "#76787A",

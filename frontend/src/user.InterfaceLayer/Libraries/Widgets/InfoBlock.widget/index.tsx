@@ -10,6 +10,7 @@ import Link from "next/link";
 import ImageAtom from "../../UI_KIT/Atoms/Image.Atom";
 import ImageEnum from "../../UI_KIT/Atoms/Image.Atom/enum";
 import ArrowRight from "../../shared/icons/arrowBlue.svg?react";
+import ImagesTeamBlockCeil from "@/user.InterfaceLayer/Libraries/UI_KIT/Cells/ImagesTeam.Cell";
 
 interface InfoBlockProps {
   supervisor: TTeam | null;
@@ -22,7 +23,10 @@ const InfoBlock: React.FC<InfoBlockProps> = ({ supervisor }) => {
         <TextAtom type={TextAtomEnum.enum_h5} className="text-text_primary">
           Загрузка сотрудника
         </TextAtom>
-        <TextAtom type={TextAtomEnum.enum_h6} className="text-[#d77556]">
+        <TextAtom
+          type={TextAtomEnum.enum_subtitle_2}
+          className="text-[#d77556]"
+        >
           100%
         </TextAtom>
       </div>
@@ -56,7 +60,7 @@ const InfoBlock: React.FC<InfoBlockProps> = ({ supervisor }) => {
           </TextAtom>
         </div>
       </div>
-      <div className="flex gap-[78px]">
+      <div className="flex gap-[78px] md:flex-col md:gap-4">
         <div className="flex flex-col gap-2">
           <TextAtom
             type={TextAtomEnum.enum_subtitle_1}
@@ -94,6 +98,17 @@ const InfoBlock: React.FC<InfoBlockProps> = ({ supervisor }) => {
               </TextAtom>
             )}
           </div>
+        </div>
+
+        <div className="flex flex-col gap-2">
+          <TextAtom
+            type={TextAtomEnum.enum_subtitle_1}
+            className="text-text_tertiary"
+          >
+            Команда
+          </TextAtom>
+
+          <ImagesTeamBlockCeil />
         </div>
       </div>
 

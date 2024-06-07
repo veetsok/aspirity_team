@@ -4,10 +4,10 @@ import TextField from "@mui/material/TextField";
 export const ValidationTextField = styled(TextField)({
   "& .MuiInputLabel-root": {
     color: "var(--text-secondary)", // цвет текста лейбла
-    borderColor: "var(--text-secondary)", // цвет границы инпута при наведении
+    borderColor: "var(--border_primary)", // цвет границы инпута при наведении
     "&.Mui-disabled": {
       color: "var(--text-primary)", // цвет текста лейбла в недоступном состоянии
-      borderColor: "var(--text-primary)", // цвет границы инпута
+      borderColor: "var(--border_primary)", // цвет границы инпута
     },
     "&.Mui-focused": {
       color: "var(--text-primary)", // цвет текста лейбла в недоступном состоянии

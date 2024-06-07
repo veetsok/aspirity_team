@@ -2,10 +2,9 @@
 @tailwind components;
 @tailwind utilities;
 
-/* * {
-  font-family: "Geometria", sans-serif;
-  -webkit-tap-highlight-color: transparent;
-} */
+* {
+  font-family: "Poppins", sans-serif;
+}
 
 .last-child-right:last-child {
   text-align: -webkit-right;

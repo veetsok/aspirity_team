@@ -9,7 +9,7 @@ const UsersBlock: React.FC<UsersBlockProps> = ({ items }) => {
   return (
     <>
       {items?.map((e, index: number) => (
-        <Link href={`/profile/${e.id}`} key={index}>
+        <Link href={`/profile/${e.id}`} key={index} className="w-fit">
           <div className="flex gap-[8px]">
             <div className="w-[48px] h-[48px] rounded-[160px]">
               <Image

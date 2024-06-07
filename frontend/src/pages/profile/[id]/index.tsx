@@ -19,11 +19,12 @@ import ImageAtom from "@/user.InterfaceLayer/Libraries/UI_KIT/Atoms/Image.Atom";
 import ImageEnum from "@/user.InterfaceLayer/Libraries/UI_KIT/Atoms/Image.Atom/enum";
 import UnionIcon from "@/user.InterfaceLayer/Libraries/shared/icons/arrow_down.svg?react";
 import Link from "next/link";
+import Spinner from "@/user.InterfaceLayer/Libraries/UI_KIT/Spinner";
 
 export default function Id() {
   const router = useRouter();
   const { id } = router.query;
-  const { products: team } = useProducts();
+  const { products: team, isLoading } = useProducts();
   const { contacts: teamContacts } = useContacts();
   const [selectedSection, setSelectedSection] = useState("main");
 
@@ -86,15 +87,19 @@ export default function Id() {
     );
   }
 
+  if (isLoading) {
+    return <Spinner />;
+  }
+
   return (
     <main className={`${globalContainer}`}>
       <Link
         href={"/"}
-        className="my-2 flex items-center gap-4 text-text_secondary py-[13px] pr-[16px] pl-[24px] w-fit"
+        className="my-2 flex items-center gap-4 text-text_tertiary py-[13px] pr-[16px] pl-[24px] w-fit"
       >
         <ImageAtom
           type={ImageEnum.enum_defaultSvg}
-          className="rotate-90 w-[14px] h-2 [&>svg]:fill-text_primary"
+          className="rotate-90 w-[14px] h-2 [&>svg]:fill-text_tertiary"
           icon={<UnionIcon />}
         />
         <TextAtom
@@ -104,7 +109,9 @@ export default function Id() {
           Вернуться к сотрудникам
         </TextAtom>
       </Link>
-      <div className={`${globalBgBlock} p-[40px 40px 20px 40px]`}>
+      <div
+        className={`${globalBgBlock} p-[40px 40px 20px 40px] gap-[56px] md:gap-6`}
+      >
         <div className="flex gap-[48px] text-text_primary md:flex-col md:items-center md:gap-[16px] gap-6">
           <div className="w-[160px] h-[160px] rounded-[360px] inline-flex">
             <Image
@@ -145,7 +152,7 @@ export default function Id() {
             </div>
           </div>
         </div>
-        <div className="flex mt-4 md:overflow-x-auto md:whitespace-nowrap md:snap-x">
+        <div className="flex md:overflow-x-auto md:whitespace-nowrap md:snap-x">
           <ButtonAtom
             type={ButtonAtomEnum.enum_tabButton}
             isActive={selectedSection === "main"}

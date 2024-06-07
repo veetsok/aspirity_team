@@ -1,94 +1,98 @@
 @font-face {
-  font-family: "Geometria";
-  src: url("./fonts/Geometria-Thin.woff2") format("woff2"),
-    url("./fonts/Geometria-Thin.eot"), url("./fonts/Geometria-Thin.woff") format("woff"),
-    url("./fonts/Geometria-Thin.ttf") format("truetype");
+  font-family: "Poppins";
+  src: url("./fonts/Poppins-Thin.woff2") format("woff2"),
+    url("./fonts/Poppins-Thin.eot"),
+    url("./fonts/Poppins-Thin.woff") format("woff"),
+    url("./fonts/Poppins-Thin.ttf") format("truetype");
   font-weight: 100;
   font-style: normal;
   font-display: swap;
 }
 
 @font-face {
-  font-family: "Geometria";
-  src: url("./fonts/Geometria-ExtraLight.woff2") format("woff2"),
-    url("./fonts/Geometria-ExtraLight.eot"),
-    url("./fonts/Geometria-ExtraLight.woff") format("woff"),
-    url("./fonts/Geometria-ExtraLight.ttf") format("truetype");
+  font-family: "Poppins";
+  src: url("./fonts/Poppins-ExtraLight.woff2") format("woff2"),
+    url("./fonts/Poppins-ExtraLight.eot"),
+    url("./fonts/Poppins-ExtraLight.woff") format("woff"),
+    url("./fonts/Poppins-ExtraLight.ttf") format("truetype");
   font-weight: 200;
   font-style: normal;
   font-display: swap;
 }
 
 @font-face {
-  font-family: "Geometria";
-  src: url("./fonts/Geometria-Light.woff2") format("woff2"),
-    url("./fonts/Geometria-Light.eot"), url("./fonts/Geometria-Light.woff") format("woff"),
-    url("./fonts/Geometria-Light.ttf") format("truetype");
+  font-family: "Poppins";
+  src: url("./fonts/Poppins-Light.woff2") format("woff2"),
+    url("./fonts/Poppins-Light.eot"),
+    url("./fonts/Poppins-Light.woff") format("woff"),
+    url("./fonts/Poppins-Light.ttf") format("truetype");
   font-weight: 300;
   font-style: normal;
   font-display: swap;
 }
 
 @font-face {
-  font-family: "Geometria";
-  src: url("./fonts/Geometria-Regular.woff2") format("woff2"),
-    url("./fonts/Geometria-Regular.eot"),
-    url("./fonts/Geometria-Regular.woff") format("woff"),
-    url("./fonts/Geometria-Regular.ttf") format("truetype");
+  font-family: "Poppins";
+  src: url("./fonts/Poppins-Regular.woff2") format("woff2"),
+    url("./fonts/Poppins-Regular.eot"),
+    url("./fonts/Poppins-Regular.woff") format("woff"),
+    url("./fonts/Poppins-Regular.ttf") format("truetype");
   font-weight: 400;
   font-style: normal;
   font-display: swap;
 }
 
 @font-face {
-  font-family: "Geometria";
-  src: url("./fonts/Geometria-Medium.woff2") format("woff2"),
-    url("./fonts/Geometria-Medium.eot"),
-    url("./fonts/Geometria-Medium.woff") format("woff"),
-    url("./fonts/Geometria-Medium.ttf") format("truetype");
+  font-family: "Poppins";
+  src: url("./fonts/Poppins-Medium.woff2") format("woff2"),
+    url("./fonts/Poppins-Medium.eot"),
+    url("./fonts/Poppins-Medium.woff") format("woff"),
+    url("./fonts/Poppins-Medium.ttf") format("truetype");
   font-weight: 500;
   font-style: normal;
   font-display: swap;
 }
 /* 
 @font-face {
-  font-family: "Geometria";
-  src: url("./fonts/Geometria-SemiBold.woff2") format("woff2"),
-    url("./fonts/Geometria-SemiBold.eot"),
-    url("./fonts/Geometria-SemiBold.woff") format("woff"),
-    url("./fonts/Geometria-SemiBold.ttf") format("truetype");
+  font-family: "Poppins";
+  src: url("./fonts/Poppins-SemiBold.woff2") format("woff2"),
+    url("./fonts/Poppins-SemiBold.eot"),
+    url("./fonts/Poppins-SemiBold.woff") format("woff"),
+    url("./fonts/Poppins-SemiBold.ttf") format("truetype");
   font-weight: 600;
   font-style: normal;
   font-display: swap;
 } */
 
 @font-face {
-  font-family: "Geometria";
-  src: url("./fonts/Geometria-Bold.woff2") format("woff2"),
-    url("./fonts/Geometria-Bold.eot"), url("./fonts/Geometria-Bold.woff") format("woff"),
-    url("./fonts/Geometria-Bold.ttf") format("truetype");
+  font-family: "Poppins";
+  src: url("./fonts/Poppins-Bold.woff2") format("woff2"),
+    url("./fonts/Poppins-Bold.eot"),
+    url("./fonts/Poppins-Bold.woff") format("woff"),
+    url("./fonts/Poppins-Bold.ttf") format("truetype");
   font-weight: 700;
   font-style: normal;
   font-display: swap;
 }
 
 @font-face {
-  font-family: "Geometria";
-  src: url("./fonts/Geometria-ExtraBold.woff2") format("woff2"),
-    url("./fonts/Geometria-ExtraBold.eot"),
-    url("./fonts/Geometria-ExtraBold.woff") format("woff"),
-    url("./fonts/Geometria-ExtraBold.ttf") format("truetype");
+  font-family: "Poppins";
+  src: url("./fonts/Poppins-ExtraBold.woff2") format("woff2"),
+    url("./fonts/Poppins-ExtraBold.eot"),
+    url("./fonts/Poppins-ExtraBold.woff") format("woff"),
+    url("./fonts/Poppins-ExtraBold.ttf") format("truetype");
   font-weight: 800;
   font-style: normal;
   font-display: swap;
 }
 
-@font-face {
-  font-family: "Geometria";
-  src: url("./fonts/Geometria-Heavy.woff2") format("woff2"),
-    url("./fonts/Geometria-Heavy.eot"), url("./fonts/Geometria-Heavy.woff") format("woff"),
-    url("./fonts/Geometria-Heavy.ttf") format("truetype");
+/* @font-face {
+  font-family: "Poppins";
+  src: url("./fonts/Poppins-Heavy.woff2") format("woff2"),
+    url("./fonts/Poppins-Heavy.eot"),
+    url("./fonts/Poppins-Heavy.woff") format("woff"),
+    url("./fonts/Poppins-Heavy.ttf") format("truetype");
   font-weight: 900;
   font-style: normal;
   font-display: swap;
-}
+} */

@@ -17,7 +17,7 @@ interface HeaderProps {}
 
 const Header: React.FC<HeaderProps> = () => {
   return (
-    <header className={`${globalContainer} ${globalFlex} py-6`}>
+    <header className={`${globalContainer} ${globalFlex} py-6 md:mx-4`}>
       <Link href={"/"} className="max-w-[180px] sm:max-w-[135px]">
         <ImageAtom
           className="w-[180px] sm:w-[135px]"

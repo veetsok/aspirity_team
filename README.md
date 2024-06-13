@@ -1,6 +1,6 @@
-﻿# Aspirity
+# Aspirity
 
-Можете без остановки увидеть по ссылке: https://account-aspirity.vercel.app/
+Можете без установки увидеть по ссылке: https://account-aspirity.vercel.app/
 
 ## Installation
 
@@ -11,3 +11,7 @@ npm install
 ```sh
 npm run dev
 ```
+
+Backend: PostgreSQL + Express
+
+Implemented: Ability to edit main information: Department and Personal Information
